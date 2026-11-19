@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clareador Dental 5 Dias | Sorriso Branco Sem Dor</title>
+  <style>
+    :root {
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --accent: #16a34a;
+      --accent-hover: #15803d;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .top-bar {
+      background-color: #0f172a;
+      color: #ffffff;
+      text-align: center;
+      padding: 10px 15px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .top-bar span {
+      color: #4ade80;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20px 16px 50px;
+    }
+
+    .hero {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ccfbf1;
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      line-height: 1.25;
+      color: #0f172a;
+      margin-bottom: 14px;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .product-showcase {
+      background: #f1f5f9;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      border: 1px dashed #cbd5e1;
+    }
+
+    .product-showcase img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .price-box {
+      background: #f0fdf4;
+      border: 2px solid #86efac;
+      border-radius: 12px;
+      padding: 18px;
+      margin: 22px 0;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #94a3b8;
+      font-size: 1rem;
+    }
+
+    .current-price {
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: #15803d;
+      line-height: 1.1;
+      margin: 4px 0;
+    }
+
+    .payment-note {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #166534;
+    }
+
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background-color: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-weight: 800;
+      padding: 18px 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .cta-sub {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      opacity: 0.95;
+      margin-top: 4px;
+    }
+
+    .section {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      color: #0f172a;
+      margin-bottom: 16px;
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .benefits-list {
+      list-style: none;
+    }
+
+    .benefits-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.98rem;
+    }
+
+    .benefits-list li:last-child {
+      border-bottom: none;
+    }
+
+    .check {
+      color: var(--accent);
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    .testimonial-card {
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+    }
+
+    .testimonial-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .stars {
+      color: #f59e0b;
+    }
+
+    .testimonial-text {
+      font-size: 0.92rem;
+      color: #334155;
+      font-style: italic;
+    }
+
+    .cities-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      font-size: 0.92rem;
+      color: #1e3a8a;
+      margin-top: 16px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+
+    .faq-answer {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    🚚 ENTREGA GRÁTIS • <span>PAGUE APENAS QUANDO RECEBER O PRODUTO</span>
+  </div>
+
+  <div class="container">
+
+    <!-- SECÇÃO PRINCIPAL (HERO) -->
+    <div class="hero">
+      <div class="badge">Fórmula Natural • Resultados em 5 Dias</div>
+      <h1>Recupere a Confiança no Seu Sorriso Sem Gastar Fortunas no Dentista</h1>
+      <p class="subtitle">
+        O <strong>Clareador Dental Smilekit 5 Days</strong> remove manchas profundas de café, chá e cigarro enquanto elimina o mau hálito logo nos primeiros usos — sem causar sensibilidade.
+      </p>
+
+      <!-- ESPAÇO PARA A IMAGEM DO PRODUTO -->
+      <div class="product-showcase">
+        <!-- Substitua o src abaixo pelo link da foto do frasco Smilekit 5 Days -->
+        <img src="https://via.placeholder.com/450x350.png?text=COLOQUE+AQUI+A+FOTO+DO+CLAREADOR+SMILEKIT" alt="Clareador Dental Smilekit 5 Days">
+      </div>
+
+      <div class="price-box">
+        <div class="old-price">De 1.399,00 MT por apenas:</div>
+        <div class="current-price">989,00 MT</div>
+        <div class="payment-note">✅ Unidade Individual • Entrega Grátis + Pagamento na Entrega</div>
+      </div>
+
+      <!-- BOTÃO DE DESTAQUE 1 -->
+      <a href="https://wa.me/258860836539?text=Ol%C3%A1!%20Vi%20o%20Clareador%20Dental%205%20Dias%20por%20989%20MT%20e%20quero%20encomendar%20com%20pagamento%20na%20entrega." class="cta-btn" target="_blank">
+        ENCOMENDAR AGORA PELO WHATSAPP
+        <span class="cta-sub">🔒 Sem pagamento adiantado • Pague só ao receber</span>
+      </a>
+    </div>
+
+    <!-- BENEFÍCIOS -->
+    <div class="section">
+      <h2>Por Que Este Clareador Funciona Tão Rápido?</h2>
+      <ul class="benefits-list">
+        <li>
+          <span class="check">✔</span>
+          <div><strong>Clareamento Visível em 3 a 5 Dias:</strong> Atua diretamente na camada superficial do dente removendo o amarelado acumulado[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span).</div>
+        </li>
+        <li>
+          <span class="check">✔</span>
+          <div><strong>Zero Sensibilidade ou Dor:</strong> Feito à base de ingredientes naturais que limpam sem agredir o esmalte dentário[span_2](start_span)[span_2](end_span).</div>
+        </li>
+        <li>
+          <span class="check">✔</span>
+          <div><strong>Hálito Fresco Prolongado:</strong> Elimina as bactérias causadoras do mau cheiro e deixa sensação imediata de boca limpa[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span).</div>
+        </li>
+        <li>
+          <span class="check">✔</span>
+          <div><strong>Fácil de Usar no Dia a Dia:</strong> Basta molhar a escova, mergulhar no pó clareador e escovar suavemente durante 2 minutos.</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- PROVAS SOCIAIS -->
+    <div class="section">
+      <h2>Quem Já Usou em Moçambique Aprova</h2>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <span>Manuel N. — Maputo</span>
+          <span class="stars">★★★★★</span>
+        </div>
+        <p class="testimonial-text">
+          "Eu tinha mau cheiro e dentes muito amarelados, mesmo escovando todos os dias com pasta normal não via diferença. No terceiro dia com este clareador o meu sorriso já mudou completamente. Recomendo[span_5](start_span)[span_6](start_span)!"[span_5](end_span)[span_6](end_span)
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <span>Augusto M. — Beira</span>
+          <span class="stars">★★★★★</span>
+        </div>
+        <p class="testimonial-text">
+          "Achei excelente porque só paguei quando o estafeta me entregou em mãos. Estou no quinto dia de uso e os dentes ficaram muito mais claros sem doer nada.[span_7](start_span)"[span_7](end_span)
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <span>Anabela C. — Nampula</span>
+          <span class="stars">★★★★★</span>
+        </div>
+        <p class="testimonial-text">
+          "Atendimento rápido e produto bem embalado. Chegou dentro do prazo e cumpriu exatamente o que promete.[span_8](start_span)"[span_8](end_span)
+        </p>
+      </div>
+
+      <div class="cities-box">
+        <strong>📍 Cidades com Entrega Rápida e Gratuita:</strong><br>
+        Maputo, Matola, Xai-Xai, Inhambane, Beira, Chimoio, Tete, Nampula, Pemba e Lichinga[span_9](start_span)[span_9](end_span).
+      </div>
+    </div>
+
+    <!-- PERGUNTAS FREQUENTES (FAQ) -->
+    <div class="section">
+      <h2>Perguntas Frequentes</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">1. Como funciona o pagamento? Preciso pagar antes?</div>
+        <div class="faq-answer">
+          Não! Você não paga nada antecipado. Faz o pedido pelo nosso WhatsApp, enviamos o produto até à sua localização e você só paga os <strong>989,00 MT</strong> no momento em que tiver o produto em mãos.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">2. O produto estraga o esmalte ou deixa os dentes sensíveis?</div>
+        <div class="faq-answer">
+          Não. A fórmula é desenvolvida com componentes naturais seguros que removem manchas externas sem corroer ou enfraquecer os dentes[span_10](start_span)[span_10](end_span).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">3. Em quanto tempo vejo os primeiros resultados?</div>
+        <div class="faq-answer">
+          A sensação de limpeza e hálito fresco é imediata[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span). O clareamento visível começa a notar-se entre o <strong>3º e o 5º dia</strong> de uso contínuo[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">4. Quem não deve usar este produto?</div>
+        <div class="faq-answer">
+          Não é recomendado para crianças menores de 12 anos, pessoas com feridas abertas na boca ou alergia a componentes naturais[span_15](start_span)[span_15](end_span).
+        </div>
+      </div>
+
+      <div style="margin-top: 24px;">
+        <!-- BOTÃO DE DESTAQUE 2 -->
+        <a href="https://wa.me/258860836539?text=Ol%C3%A1!%20Li%20as%20informa%C3%A7%C3%B5es%20do%20Clareador%20Dental%20(989%20MT)%20e%20quero%20garantir%20a%20minha%20unidade." class="cta-btn" target="_blank">
+          GARANTIR MINHA UNIDADE POR 989 MT
+          <span class="cta-sub">📲 Clique para confirmar o endereço de entrega no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Compra 100% Segura • Pagamento Contra-Entrega em Moçambique</p>
+      <p style="margin-top: 6px;">Atendimento Oficial via WhatsApp: +258 86 083 6539</p>
+    </div>
+
+  </div>
+
+</body>
+  </html>
+  
